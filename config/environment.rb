@@ -17,7 +17,7 @@ require 'logger'
 require 'json'
 require 'sinatra'
 require "sinatra/reloader" if development?
-
+require 'rest-client'
 require 'erb'
 
 APP_ID = ENV['APP_ID']

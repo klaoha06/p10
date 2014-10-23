@@ -14,7 +14,7 @@ gem 'activerecord', '~>4.1'
 gem 'koala'
 gem 'rake'
 gem 'json'
-
+gem 'rest-client'
 gem 'shotgun'
 
 group :test do
