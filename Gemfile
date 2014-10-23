@@ -16,6 +16,7 @@ gem 'rake'
 gem 'json'
 gem 'rest-client'
 gem 'shotgun'
+gem 'dotenv'
 
 group :test do
   gem 'shoulda-matchers'

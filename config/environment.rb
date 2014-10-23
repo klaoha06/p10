@@ -19,10 +19,13 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 require 'rest-client'
 require 'erb'
+require 'koala'
+require 'dotenv'
+Dotenv.load
 
 APP_ID = ENV['APP_ID']
 APP_SECRET = ENV['APP_SECRET']
-REDIRECT_URI = "https://desolate-wave-5541.herokuapp.com/auth"
+REDIRECT_URI = "http://localhost:9393/auth"
 
 
 # Some helper constants for path-centric logic
