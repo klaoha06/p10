@@ -18,7 +18,7 @@ get '/auth' do
 end
 
 # def get_sweet_access_token(code)
-  response = HTTParty.get("https://graph.facebook.com/oauth/access_token?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&client_secret=#{APP_SECRET}&code=#{code}")
+  # response = HTTParty.get("https://graph.facebook.com/oauth/access_token?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&client_secret=#{APP_SECRET}&code=#{code}")
 #   # p response[:expires]
 #   # p response
 #   p response[:access_token]
