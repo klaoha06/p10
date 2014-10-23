@@ -13,6 +13,7 @@ gem 'activesupport', '~>4.1'
 gem 'activerecord', '~>4.1'
 gem 'koala'
 gem 'rake'
+gem 'json'
 
 gem 'shotgun'
 

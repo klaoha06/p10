@@ -9,7 +9,8 @@ end
 get '/auth' do
   if params[:code]
   	response = HTTParty.get("https://graph.facebook.com/oauth/access_token?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&client_secret=#{APP_SECRET}&code=#{params[:code]}")
-    p response.parsed_response
+    p JSON.parse(response.parsed_response)
+
     # erb :test
   else
   #   redirect '/'
