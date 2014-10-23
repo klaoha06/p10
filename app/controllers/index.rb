@@ -11,12 +11,12 @@ get '/auth' do
     @access_token = get_sweet_access_token(params[:code])
     erb :test
   else
-    p "got some params or something"
+    # p "got some params or something"
     # p params
   end
 end
 
 def get_sweet_access_token(code)
-  p response = HTTParty.get("https://graph.facebook.com/oauth/access_token?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&client_secret=#{APP_SECRET}&code=#{code}")
-  p response[:access_token]
+  response = HTTParty.get("https://graph.facebook.com/oauth/access_token?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&client_secret=#{APP_SECRET}&code=#{code}")
+  response[:access_token]
 end
