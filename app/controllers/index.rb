@@ -3,7 +3,7 @@ get '/' do
 end
 
 get '/log_in' do
-  redirect to("https://www.facebook.com/dialog/oauth?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&scope=user_friends,user_photo")
+  redirect to("https://www.facebook.com/dialog/oauth?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&scope=user_friends")
 end
 
 get '/auth' do
