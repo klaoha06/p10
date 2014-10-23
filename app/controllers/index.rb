@@ -7,12 +7,12 @@ get '/log_in' do
 end
 
 get '/auth' do
-	p params
+	params[:code]
   # if params[:code]
   #   p get_sweet_access_token(params[:code])
   # else
   #   p "got some params or something"
-  #   p params
+  #   # p params
   # end
 end
 
