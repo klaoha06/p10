@@ -3,13 +3,13 @@ get '/' do
 end
 
 get '/log_in' do
-  redirect to("https://www.facebook.com/dialog/oauth?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&scope=user_friends,user_photos")
+  redirect to("https://www.facebook.com/dialog/oauth?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&scope=user_friends,user_photo")
 end
 
 get '/auth' do
-	# params[:code]
   if params[:code]
-    p get_sweet_access_token(params[:code])
+    @access_token = get_sweet_access_token(params[:code])
+    erb :test
   else
     p "got some params or something"
     # p params
@@ -17,5 +17,6 @@ get '/auth' do
 end
 
 def get_sweet_access_token(code)
-  # p HTTParty.get("https://graph.facebook.com/oauth/access_token?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&client_secret=#{APP_SECRET}&code=#{code}")
+  p response = HTTParty.get("https://graph.facebook.com/oauth/access_token?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&client_secret=#{APP_SECRET}&code=#{code}")
+  p response[:access_token]
 end
