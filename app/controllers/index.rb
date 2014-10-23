@@ -11,8 +11,7 @@ get '/auth' do
     @access_token = get_sweet_access_token(params[:code])
     erb :test
   else
-    # p "got some params or something"
-    # p params
+    redirect '/'
   end
 end
 
