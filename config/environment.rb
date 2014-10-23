@@ -20,6 +20,11 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 
+APP_ID = ENV['APP_ID']
+APP_SECRET = ENV['APP_SECRET']
+REDIRECT_URI = "https://desolate-wave-5541.herokuapp.com/auth"
+
+
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
