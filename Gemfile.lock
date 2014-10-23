@@ -82,6 +82,7 @@ DEPENDENCIES
   factory_girl
   faker
   httparty
+  json
   koala
   pg
   rack-test
