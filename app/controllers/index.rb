@@ -3,17 +3,17 @@ get '/' do
 end
 
 get '/log_in' do
-  redirect to("https://www.facebook.com/dialog/oauth?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}")
+  redirect to("https://www.facebook.com/dialog/oauth?client_id=#{APP_ID}&redirect_uri=#{REDIRECT_URI}&scope=user_friends,user_photos")
 end
 
 get '/auth' do
-	params[:code]
-  # if params[:code]
-  #   p get_sweet_access_token(params[:code])
-  # else
-  #   p "got some params or something"
-  #   # p params
-  # end
+	# params[:code]
+  if params[:code]
+    p get_sweet_access_token(params[:code])
+  else
+    p "got some params or something"
+    # p params
+  end
 end
 
 def get_sweet_access_token(code)
